@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:quickwiz_app/Network/api_links.dart';
-import 'package:quickwiz_app/models/quiz_response_model.dart';
+import 'package:quickwiz_app/models/response_models/quiz_response_model.dart';
 
 class ApiService {
   static Future<QuizResponseModel> getQuizQuestions() async {

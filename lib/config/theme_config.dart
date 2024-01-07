@@ -38,15 +38,35 @@ class ThemeConfig {
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
-          backgroundColor:
-              const MaterialStatePropertyAll(MyColors.darkTunaColor),
-          foregroundColor: const MaterialStatePropertyAll(MyColors.white),
+          backgroundColor: MaterialStateProperty.resolveWith<Color>(
+            (Set<MaterialState> states) {
+              if (states.contains(MaterialState.disabled)) {
+                return MyColors.darkTunaColor.withOpacity(0);
+              }
+              return MyColors.darkTunaColor;
+            },
+          ),
+          foregroundColor: MaterialStateProperty.resolveWith<Color>(
+            (Set<MaterialState> states) {
+              if (states.contains(MaterialState.disabled)) {
+                return MyColors.darkTunaColor.withOpacity(0.25);
+              }
+              return MyColors.white;
+            },
+          ),
           shape: const MaterialStatePropertyAll(StadiumBorder()),
           overlayColor:
               MaterialStatePropertyAll(MyColors.white.withOpacity(0.1)),
           shadowColor:
               MaterialStatePropertyAll(MyColors.darkTunaColor.withOpacity(0.1)),
-          elevation: MaterialStatePropertyAll(8.sp),
+          elevation: MaterialStateProperty.resolveWith<double>(
+            (Set<MaterialState> states) {
+              if (states.contains(MaterialState.disabled)) {
+                return 0;
+              }
+              return 8.sp;
+            },
+          ),
           surfaceTintColor: const MaterialStatePropertyAll(Colors.transparent),
         ),
       ),
@@ -97,17 +117,12 @@ class ThemeConfig {
         thickness: 0.5.h,
       ),
       cardTheme: CardTheme(
-        color: MyColors.darkTunaColor,
+        color: MyColors.white,
         surfaceTintColor: Colors.transparent,
-        // shadowColor: MyColors.lightGrey.withOpacity(0.1),
-
-        elevation: 0,
+        shadowColor: MyColors.lightGrey.withOpacity(0.1),
+        elevation: 4,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8.r),
-          side: BorderSide(
-            color: MyColors.lightGrey,
-            width: 1.h,
-          ),
+          borderRadius: BorderRadius.circular(32.r),
         ),
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
@@ -145,7 +160,6 @@ class ThemeConfig {
           borderRadius: BorderRadius.circular(8.r),
         ),
       ),
-      radioTheme: RadioThemeData(),
       inputDecorationTheme: InputDecorationTheme(
         contentPadding: EdgeInsets.symmetric(horizontal: 24.w),
         filled: true,
