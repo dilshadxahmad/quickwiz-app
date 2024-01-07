@@ -4,7 +4,7 @@ publish_to: 'none'
 version: 0.1.0
 
 environment:
-  sdk: '>=3.1.3 <4.0.0'
+  sdk: '>=3.1.2 <4.0.0'
 
 dependencies:
   flutter:
@@ -25,15 +25,15 @@ flutter:
     - assets/images/
 
   fonts:
-    - family: Poppins
+    - family: SpaceGrotesk
       fonts:
-      - asset: assets/fonts/PoppinsRegular.ttf
-      - asset: assets/fonts/PoppinsBold.ttf
-      - asset: assets/fonts/PoppinsBoldItalic.ttf
-      - asset: assets/fonts/PoppinsItalic.ttf
-      - asset: assets/fonts/PoppinsMedium.ttf
-      - asset: assets/fonts/PoppinsSemiBold.ttf
-    - family: Roboto
+      - asset: assets/fonts/SpaceGroteskBold.ttf
+      - asset: assets/fonts/SpaceGroteskLight.ttf
+      - asset: assets/fonts/SpaceGroteskMedium.ttf
+      - asset: assets/fonts/SpaceGroteskRegular.ttf
+      - asset: assets/fonts/SpaceGroteskSemiBold.ttf
+    - family: Urbanist
       fonts:
-      - asset: assets/fonts/RobotoRegular.ttf
-      - asset: assets/fonts/RobotoBold.ttf
+      - asset: assets/fonts/UrbanistBold.ttf
+      - asset: assets/fonts/UrbanistLight.ttf
+      - asset: assets/fonts/UrbanistRegular.ttf

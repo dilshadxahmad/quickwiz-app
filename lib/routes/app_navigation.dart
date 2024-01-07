@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:quickwiz_app/Routes/app_navigation_routes.dart';
 import 'package:quickwiz_app/Routes/screen_arguments.dart';
+import 'package:quickwiz_app/routes/app_keys.dart';
 
 class AppNavigation {
-  static final GlobalKey<NavigatorState> navigationKey =
-      GlobalKey<NavigatorState>();
+  static final GlobalKey<NavigatorState> navigationKey = AppKeys.navigationKey;
 
   static Future<dynamic> navigateTo({String? routeName, Object? arguments}) =>
       navigationKey.currentState!.pushNamed(

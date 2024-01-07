@@ -8,82 +8,68 @@ class ThemeConfig {
     return ThemeData(
       useMaterial3: true,
       canvasColor: Colors.transparent,
-      scaffoldBackgroundColor: MyColors.white,
+      scaffoldBackgroundColor: MyColors.antiqueYellowColor,
+      fontFamily: MyFonts.spaceGroteskFont,
       colorScheme: ColorScheme.fromSwatch(
         backgroundColor: MyColors.white,
       ),
       appBarTheme: AppBarTheme(
-        shape: Border(
-          bottom: BorderSide(
-            color: MyColors.lightGrey,
-            width: 1.h,
-          ),
-        ),
         toolbarHeight: 100.h,
         iconTheme: IconThemeData(
           size: 24.sp,
           fill: 0,
-          color: MyColors.black,
+          color: MyColors.darkTunaColor,
         ),
         actionsIconTheme: const IconThemeData(
-          color: MyColors.white,
+          color: MyColors.darkTunaColor,
           fill: 0.5,
         ),
-        backgroundColor: MyColors.white,
+        backgroundColor: MyColors.antiqueYellowColor,
+        surfaceTintColor: Colors.transparent,
         // titleSpacing: 16.w,
         titleTextStyle: TextStyle(
           fontSize: 20.sp,
-          color: MyColors.black,
+          color: MyColors.darkTunaColor,
         ),
       ),
-      fontFamily: MyFonts.poppinsFont,
       progressIndicatorTheme: ProgressIndicatorThemeData(
-        color: MyColors.primaryBlue,
-        linearTrackColor: MyColors.primaryBlue.withOpacity(0.25),
+        color: MyColors.darkTunaColor,
+        linearTrackColor: MyColors.darkTunaColor.withOpacity(0.25),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
-          backgroundColor: const MaterialStatePropertyAll(MyColors.primaryBlue),
+          backgroundColor:
+              const MaterialStatePropertyAll(MyColors.darkTunaColor),
           foregroundColor: const MaterialStatePropertyAll(MyColors.white),
-          shape: MaterialStatePropertyAll(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.r),
-            ),
-          ),
+          shape: const MaterialStatePropertyAll(StadiumBorder()),
           overlayColor:
               MaterialStatePropertyAll(MyColors.white.withOpacity(0.1)),
           shadowColor:
-              MaterialStatePropertyAll(MyColors.primaryBlue.withOpacity(0.1)),
+              MaterialStatePropertyAll(MyColors.darkTunaColor.withOpacity(0.1)),
           elevation: MaterialStatePropertyAll(8.sp),
           surfaceTintColor: const MaterialStatePropertyAll(Colors.transparent),
         ),
       ),
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
-          backgroundColor: const MaterialStatePropertyAll(MyColors.primaryBlue),
-          foregroundColor: const MaterialStatePropertyAll(MyColors.white),
-          shape: MaterialStatePropertyAll(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.r),
-            ),
-          ),
+          backgroundColor: const MaterialStatePropertyAll(Colors.transparent),
+          foregroundColor:
+              const MaterialStatePropertyAll(MyColors.darkTunaColor),
+          shape: const MaterialStatePropertyAll(StadiumBorder()),
           overlayColor:
               MaterialStatePropertyAll(MyColors.white.withOpacity(0.1)),
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: ButtonStyle(
-          foregroundColor: const MaterialStatePropertyAll(MyColors.primaryBlue),
-          shape: MaterialStatePropertyAll(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.r),
-            ),
-          ),
+          foregroundColor:
+              const MaterialStatePropertyAll(MyColors.darkTunaColor),
+          shape: const MaterialStatePropertyAll(StadiumBorder()),
           side: const MaterialStatePropertyAll(
-            BorderSide(color: MyColors.primaryBlue),
+            BorderSide(color: MyColors.darkTunaColor),
           ),
           overlayColor:
-              MaterialStatePropertyAll(MyColors.primaryBlue.withOpacity(0.1)),
+              MaterialStatePropertyAll(MyColors.darkTunaColor.withOpacity(0.1)),
           elevation: const MaterialStatePropertyAll(0),
         ),
       ),
@@ -91,9 +77,10 @@ class ThemeConfig {
         style: ButtonStyle(
           iconSize: const MaterialStatePropertyAll(24),
           backgroundColor: const MaterialStatePropertyAll(Colors.transparent),
-          foregroundColor: const MaterialStatePropertyAll(MyColors.black),
+          foregroundColor:
+              const MaterialStatePropertyAll(MyColors.darkTunaColor),
           overlayColor:
-              MaterialStatePropertyAll(MyColors.black.withOpacity(0.1)),
+              MaterialStatePropertyAll(MyColors.darkTunaColor.withOpacity(0.1)),
           shape: MaterialStatePropertyAll(
             RoundedRectangleBorder(
               side: BorderSide(
@@ -110,8 +97,8 @@ class ThemeConfig {
         thickness: 0.5.h,
       ),
       cardTheme: CardTheme(
-        color: MyColors.white,
-        surfaceTintColor: MyColors.white,
+        color: MyColors.darkTunaColor,
+        surfaceTintColor: Colors.transparent,
         // shadowColor: MyColors.lightGrey.withOpacity(0.1),
 
         elevation: 0,
@@ -131,26 +118,26 @@ class ThemeConfig {
         focusElevation: 0,
       ),
       tabBarTheme: TabBarTheme(
-        indicatorColor: MyColors.primaryBlue,
+        indicatorColor: MyColors.darkTunaColor,
         indicatorSize: TabBarIndicatorSize.tab,
         indicator: BoxDecoration(
-          color: MyColors.primaryBlue,
+          color: MyColors.darkTunaColor,
           borderRadius: BorderRadius.circular(8.r),
         ),
         overlayColor: const MaterialStatePropertyAll(Colors.transparent),
         labelColor: MyColors.white,
-        unselectedLabelColor: MyColors.black,
+        unselectedLabelColor: MyColors.darkTunaColor,
         dividerColor: Colors.transparent,
         labelPadding: EdgeInsets.all(8.h),
       ),
       drawerTheme: DrawerThemeData(
-        backgroundColor: MyColors.white,
+        backgroundColor: MyColors.darkTunaColor,
         surfaceTintColor: Colors.transparent,
         width: 348.w,
         shape: const LinearBorder(),
       ),
       snackBarTheme: SnackBarThemeData(
-        backgroundColor: MyColors.black.withOpacity(0.3),
+        backgroundColor: MyColors.darkTunaColor.withOpacity(0.3),
         contentTextStyle: const TextStyle(color: MyColors.white),
         behavior: SnackBarBehavior.floating,
         width: 176.w,
@@ -158,6 +145,7 @@ class ThemeConfig {
           borderRadius: BorderRadius.circular(8.r),
         ),
       ),
+      radioTheme: RadioThemeData(),
       inputDecorationTheme: InputDecorationTheme(
         contentPadding: EdgeInsets.symmetric(horizontal: 24.w),
         filled: true,
@@ -193,7 +181,7 @@ class ThemeConfig {
         ),
         errorBorder: OutlineInputBorder(
           borderSide: const BorderSide(
-            color: MyColors.orange,
+            color: Colors.red,
           ),
           borderRadius: BorderRadius.all(
             Radius.circular(10.r),
@@ -201,7 +189,7 @@ class ThemeConfig {
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderSide: const BorderSide(
-            color: MyColors.orange,
+            color: Colors.red,
           ),
           borderRadius: BorderRadius.all(
             Radius.circular(10.r),
@@ -214,55 +202,70 @@ class ThemeConfig {
         ),
       ),
       textSelectionTheme: TextSelectionThemeData(
-        cursorColor: MyColors.primaryBlue,
-        selectionHandleColor: MyColors.primaryBlue,
-        selectionColor: MyColors.primaryBlue.withOpacity(0.1),
+        cursorColor: MyColors.darkTunaColor,
+        selectionHandleColor: MyColors.darkTunaColor,
+        selectionColor: MyColors.darkTunaColor.withOpacity(0.1),
       ),
       textTheme: TextTheme(
         // Display Styles
         displayLarge: TextStyle(
+          color: MyColors.darkTunaColor,
           fontSize: 44.sp,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.normal,
         ),
+
+        headlineMedium: TextStyle(
+          fontFamily: MyFonts.urbanistFont,
+          color: MyColors.white,
+          fontSize: 14.sp,
+        ),
+
+        ////////////////////////////////////////////////
         displayMedium: TextStyle(
+          color: MyColors.darkTunaColor,
           fontSize: 32.sp,
         ),
         displaySmall: TextStyle(
+          color: MyColors.darkTunaColor,
           fontSize: 20.sp,
         ),
 
         // Label Styles
         labelLarge: TextStyle(
+          color: MyColors.darkTunaColor,
           fontSize: 16.sp,
           fontWeight: FontWeight.w600,
         ),
         labelSmall: TextStyle(
+          color: MyColors.darkTunaColor,
           fontSize: 14.sp,
-          fontFamily: MyFonts.robotoFont,
+          fontFamily: MyFonts.urbanistFont,
           decoration: TextDecoration.underline,
           fontWeight: FontWeight.w700,
         ),
 
         // Body Styles
         bodyLarge: TextStyle(
+          color: MyColors.darkTunaColor,
           fontSize: 24.sp,
           fontWeight: FontWeight.w500,
         ),
         bodyMedium: TextStyle(
+          color: MyColors.darkTunaColor,
           fontSize: 16.sp,
         ),
         bodySmall: TextStyle(
+          color: MyColors.darkTunaColor,
           fontSize: 14.sp,
-          fontFamily: MyFonts.robotoFont,
+          fontFamily: MyFonts.urbanistFont,
           fontWeight: FontWeight.w400,
           letterSpacing: 0.1,
         ),
 
         // Headline Styles
-        headlineMedium: TextStyle(
-          fontSize: 14.sp,
-        ),
+
         headlineSmall: TextStyle(
+          color: MyColors.darkTunaColor,
           fontSize: 12.sp,
         ),
       ),
@@ -273,17 +276,18 @@ class ThemeConfig {
     return ThemeData(
       useMaterial3: true,
       canvasColor: Colors.transparent,
-      scaffoldBackgroundColor: MyColors.black,
+      scaffoldBackgroundColor: MyColors.darkTunaColor,
+      fontFamily: MyFonts.spaceGroteskFont,
       colorScheme: ColorScheme.fromSwatch(
-        backgroundColor: MyColors.black,
+        backgroundColor: MyColors.darkTunaColor,
       ),
-      iconTheme: IconThemeData(
+      iconTheme: const IconThemeData(
         color: MyColors.white,
       ),
       appBarTheme: AppBarTheme(
         shape: Border(
           bottom: BorderSide(
-            color: MyColors.black,
+            color: MyColors.darkTunaColor,
             width: 1.h,
           ),
         ),
@@ -297,14 +301,13 @@ class ThemeConfig {
           color: MyColors.white,
           fill: 0.5,
         ),
-        backgroundColor: MyColors.black,
+        backgroundColor: MyColors.darkTunaColor,
         // titleSpacing: 16.w,
         titleTextStyle: TextStyle(
           fontSize: 20.sp,
-          color: MyColors.black,
+          color: MyColors.darkTunaColor,
         ),
       ),
-      fontFamily: MyFonts.poppinsFont,
       progressIndicatorTheme: ProgressIndicatorThemeData(
         color: MyColors.white,
         linearTrackColor: MyColors.white.withOpacity(0.25),
@@ -398,26 +401,26 @@ class ThemeConfig {
         focusElevation: 0,
       ),
       tabBarTheme: TabBarTheme(
-        indicatorColor: MyColors.primaryBlue,
+        indicatorColor: MyColors.darkTunaColor,
         indicatorSize: TabBarIndicatorSize.tab,
         indicator: BoxDecoration(
-          color: MyColors.primaryBlue,
+          color: MyColors.darkTunaColor,
           borderRadius: BorderRadius.circular(8.r),
         ),
         overlayColor: const MaterialStatePropertyAll(Colors.transparent),
         labelColor: MyColors.white,
-        unselectedLabelColor: MyColors.black,
+        unselectedLabelColor: MyColors.darkTunaColor,
         dividerColor: Colors.transparent,
         labelPadding: EdgeInsets.all(8.h),
       ),
       drawerTheme: DrawerThemeData(
-        backgroundColor: MyColors.black,
+        backgroundColor: MyColors.darkTunaColor,
         surfaceTintColor: Colors.transparent,
         width: 348.w,
         shape: const LinearBorder(),
       ),
       snackBarTheme: SnackBarThemeData(
-        backgroundColor: MyColors.black.withOpacity(0.3),
+        backgroundColor: MyColors.darkTunaColor.withOpacity(0.3),
         contentTextStyle: const TextStyle(color: MyColors.white),
         behavior: SnackBarBehavior.floating,
         width: 176.w,
@@ -460,7 +463,7 @@ class ThemeConfig {
         ),
         errorBorder: OutlineInputBorder(
           borderSide: const BorderSide(
-            color: MyColors.orange,
+            color: Colors.red,
           ),
           borderRadius: BorderRadius.all(
             Radius.circular(10.r),
@@ -468,7 +471,7 @@ class ThemeConfig {
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderSide: const BorderSide(
-            color: MyColors.orange,
+            color: Colors.red,
           ),
           borderRadius: BorderRadius.all(
             Radius.circular(10.r),
@@ -490,8 +493,8 @@ class ThemeConfig {
         displayLarge: TextStyle(
           color: MyColors.white,
           fontSize: 44.sp,
-          fontWeight: FontWeight.bold,
         ),
+
         displayMedium: TextStyle(
           color: MyColors.white,
           fontSize: 32.sp,
@@ -510,7 +513,7 @@ class ThemeConfig {
         labelSmall: TextStyle(
           color: MyColors.white,
           fontSize: 14.sp,
-          fontFamily: MyFonts.robotoFont,
+          fontFamily: MyFonts.urbanistFont,
           decoration: TextDecoration.underline,
           fontWeight: FontWeight.w700,
         ),
@@ -528,7 +531,7 @@ class ThemeConfig {
         bodySmall: TextStyle(
           color: MyColors.white,
           fontSize: 14.sp,
-          fontFamily: MyFonts.robotoFont,
+          fontFamily: MyFonts.urbanistFont,
           fontWeight: FontWeight.w400,
           letterSpacing: 0.1,
         ),
