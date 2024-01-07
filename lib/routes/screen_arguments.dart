@@ -1,0 +1,3 @@
+class ScreenArguments {
+  const ScreenArguments();
+}
